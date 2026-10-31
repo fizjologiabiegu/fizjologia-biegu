@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiza Treningu | FIZJOLOGIA BIEGU</title>
+    <meta name="description" content="Zobacz, jak analizujemy dane telemetryczne. Surowa analiza tętna, dynamiki biegu i realnego zmęczenia.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                        },
+                        darkbg: '#0a0a0c',
+                        cardbg: '#121216',
+                        borderbg: '#22222a'
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-darkbg text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAWIGACJA -->
+    <header class="fixed top-0 w-full z-50 bg-darkbg/80 backdrop-blur-md border-b border-borderbg">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="w-3 h-3 bg-brand-500 rounded-full animate-pulse"></span>
+                <span class="font-mono font-bold tracking-wider text-lg text-white">FIZJOLOGIA<span class="text-brand-500">.BIEGU</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-8 font-mono text-sm text-slate-400">
+                <a href="index.html#metodologia" class="hover:text-white transition-colors">METODOLOGIA</a>
+                <a href="analiza.html" class="text-white font-bold transition-colors">ANALIZA TRENINGU</a>
+                <a href="index.html#selekcja" class="hover:text-white transition-colors">SELEKCJA</a>
+                <a href="index.html#oferta" class="hover:text-white transition-colors">OFERTA</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="index.html#panel-login" class="text-slate-300 hover:text-white font-mono text-xs uppercase px-3 py-2 border border-borderbg rounded transition-colors">
+                    ZALOGUJ SIĘ
+                </a>
+                <a href="index.html#kontakt" class="bg-brand-600 hover:bg-brand-500 text-white font-mono text-xs uppercase px-4 py-2.5 rounded font-semibold transition-all">
+                    OPIEKA I PLANY
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO PODSTRONY -->
+    <section class="pt-32 pb-16 md:pt-44 md:pb-24 px-4 max-w-6xl mx-auto relative">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-borderbg border border-slate-700/50 mb-6 font-mono text-xs text-brand-500 font-semibold uppercase tracking-widest">
+                [ SUROWE DANE ]
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                Średnie tempo kłamie.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-rose-400 to-amber-400">Czytamy to, czego nie widać na pierwszy rzut oka.</span>
+            </h1>
+            <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+                Większość biegaczy ocenia trening po cyfrze na zegarku. My rozkładamy każdy odcinek na czynniki pierwsze: badamy wzrost tętna przy stałym tempie, jakość regeneracji i to, jak Twój organizm znosi realne obciążenia.
+            </p>
+        </div>
+    </section>
+
+    <!-- CO DOKŁADNIE ANALIZUJEMY -->
+    <section class="py-20 border-t border-borderbg bg-cardbg/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="font-mono text-xs text-brand-500 uppercase tracking-widest font-semibold">[ OBSZARY ANALIZY ]</span>
+                <h2 class="text-3xl font-bold text-white mt-2">Na co patrzymy po Twoim treningu?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 font-mono">
+                <div class="p-6 bg-darkbg border border-borderbg rounded-xl">
+                    <div class="text-brand-500 text-xs font-bold mb-2">01 // TĘTNO I DRYF</div>
+                    <h3 class="text-lg font-bold text-white mb-3">Reakcja Układu Krążenia</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-sans">
+                        Analizujemy, jak tętno zachowuje się na kolejnych kilometrach. Czy przy tym samym tempie organizm nie zaczyna wykazywać ukrytego zmęczenia lub przegrzania.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-darkbg border border-borderbg rounded-xl">
+                    <div class="text-brand-500 text-xs font-bold mb-2">02 // ZMĘCZENIE OBWODOWE</div>
+                    <h3 class="text-lg font-bold text-white mb-3">Dynamika i Krok</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-sans">
+                        Zmiana kadencji czy czasu kontaktu stopy z podłożem w końcówce akcentu zdradza spadek siły i zmęczenie układu nerwowego – zanim jeszcze poczujesz ból.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-darkbg border border-borderbg rounded-xl">
+                    <div class="text-brand-500 text-xs font-bold mb-2">03 // REKREACJA I STRES</div>
+                    <h3 class="text-lg font-bold text-white mb-3">Wpływ Trybu Życia</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-sans">
+                        Kompensujemy plan na podstawie informacji o śnie, stresie w pracy czy codziennym zmęczeniu. Trening ma budować formę, a nie dokładać kontuzji.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY / PORÓWNANIE -->
+    <section class="py-20 border-t border-borderbg bg-darkbg">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-cardbg p-8 rounded-2xl border border-borderbg">
+                <span class="font-mono text-xs text-brand-500 uppercase tracking-widest font-semibold">[ RÓŻNICA W PODEJŚCIU ]</span>
+                <h3 class="text-2xl font-bold text-white mt-2 mb-8">Trening na czucie vs. Trening oparty na danych</h3>
+
+                <div class="grid md:grid-cols-2 gap-6 text-xs font-mono">
+                    <div class="p-5 bg-darkbg border border-rose-500/30 rounded-xl space-y-3">
+                        <div class="text-rose-400 font-bold text-sm">❌ BIEG "NA ŚLEPO"</div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Biegacz widzi tempo 4:00/km i ciśnie do końca, mimo że tętno szybuje w kosmos. Wynik zrobiony, ale zmęczenie kasuje kolejne 3 dni treningowe.
+                        </p>
+                    </div>
+
+                    <div class="p-5 bg-darkbg border border-emerald-500/30 rounded-xl space-y-3">
+                        <div class="text-emerald-400 font-bold text-sm">✓ SZYBKA KOREKTA</div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Widzimy przekroczenie bezpiecznego progu i korygujemy obciążenia na kolejne dni. Ten sam bodziec adaptacyjny, ale bez ryzyka wypalenia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-borderbg bg-darkbg text-center font-mono text-xs text-slate-600">
+        <p>&copy; 2026 FIZJOLOGIA BIEGU. Fakty i Dane.</p>
+    </footer>
+
+</body>
+</html>
